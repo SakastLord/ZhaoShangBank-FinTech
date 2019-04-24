@@ -1,0 +1,55 @@
+指标代号	     指标名称
+
+A_to_L_ratio	资产负债率
+AR_to_Cur   	应收账款占流动资产比例
+AR_TO_ratio	  应收账款周转率
+AR_to_Reve	  应收账款/营业收入
+CA_ratio	    流动资产比率
+Cash_to_Reve	营业收入现金净流量
+CIP_ratio	    在建工程比率
+Curr_ratio	  流动比率
+Delta_Sale_grop_ratio	销售毛利率较上年
+fake	        是否造假
+Gp_growth rate	营业利润（同比增长率）
+Hold_Top5	      前五大股东股权集中度
+Intangible_ass_ratio	无形资产比率
+Inv_TO_ratio	  存货周转率
+Inventory_to_Cur 存货占流动资产比例
+Invest_to_NA	   投资收益利润比
+Mainb_gp_ratio	 主营业务毛利率
+Mainb_pro_ratio	 主营业务比率
+Monetary_to_Cur	 货币资金占流动资产比例
+Neg_Dednp_times	 最近三年扣非净利润为负的次数（包括今年）
+NetCash_OA_growth_rate	经营活动产生的现金流量净额（同比增长率）
+Nonb_to_np	     营业外收入/净利润
+Np_growth_rate	 净利润（同比增长率）
+Opinion	  `      审计意见
+OtherRec_to_Cur	 其他应收款占流动资产比例
+Pre_np	         造假前一年是否亏损
+Pre_to_Cur	     预付款项占流动资产比例
+Quick_ratio	     速动比率
+Reve_growth_rate 营业收入（同比增长率）
+ROA	             总资产报酬率
+ROE	             净资产收益率
+Sale_grop_ratio	 销售毛利率
+Sale_pro_ratio	 销售净利率
+stockcode	       公司代码
+TA_TO_ratio	     总资产周转率
+TReve_to_np	     营业总收入/净利润
+
+
+注：
+
+（1）审计意见：标准无保留意见 0；带强调事项段的无保留意见 0.5；否定/保留/无法表示意见 1
+
+（2）是否造假：造假 1；没有造假 0
+数据获取方式
+
+  本赛题数据集存放在实验室XLab的data/FT_Camp_5文件夹中，该文件夹为只读文件夹。
+  特别提醒
+
+    本赛题数据仅允许用于本次竞赛相关活动，禁止参赛者用做他用。
+    本赛题仅允许使用提供的数据，不允许使用任何外部数据。
+    本赛题数据已经过脱敏处理。
+    数据不可下载，参赛者需要使用平台完成数据处理、模型训练、结果生成等所有步骤。
+
