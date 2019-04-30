@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 
-class Simple_NN(object):
+class Network(object):
     def __init__(self,sess,n_input,learning_rate):
         self.sess = sess
         self.dim_s = n_input
@@ -32,7 +32,7 @@ class Simple_NN(object):
         self.sess.run(self.train_op,feed_dict = dict)
 
 
-    def inference(self,sess,data_x,pro):
+    def inference(self,data_x,pro):
         dict = {self.input:data_x,self.keep_probiliaty:pro}
-        result = sess.run(self.output,feed_dict = dict)
+        result = self.sess.run(self.output,feed_dict = dict)
         return result

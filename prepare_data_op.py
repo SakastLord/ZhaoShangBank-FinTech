@@ -55,8 +55,8 @@ def check_data(raw_data):
 def get_train_test_columns():
     raw_data_pd = pd.read_csv('/clever/data/FT_Camp_5/Train.csv')
     all_columns = raw_data_pd.colummns
-    train_columns  = [item for item in all_columns[:-1][1:]]
-    target_columns = [all_columns[-1]]
+    train_columns  = all_columns[1:-1]
+    target_columns = all_columns[-1]
     return train_columns,target_columns
 
 
@@ -115,20 +115,10 @@ def sample_train_data(data,batch_size,proportion,train_label,test_label):
     return np.array(result[train_label]) , np.array(result[test_label])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def sample_test_data(test_data,train_label,target_label):
+    test_x = test_data[train_label]
+    test_y = test_data[target_label]
+    return np.array(test_x) , np.array(test_y)
 
 
 
