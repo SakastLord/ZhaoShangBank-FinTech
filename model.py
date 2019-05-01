@@ -25,6 +25,8 @@ class Network(object):
         self.loss = tf.reduce_mean(self.loss_simple)
         self.train_op = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(self.loss)
 
+        # prepare saver
+        self.saver = tf.train.Saver()
 
     def train(self,data_x,data_y,prob):
         dict = {self.input:data_x,self.output_truth:data_y,self.keep_probiliaty:prob}

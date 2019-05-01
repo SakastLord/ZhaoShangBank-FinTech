@@ -35,6 +35,7 @@ def run():
     raw_data = csv2pandas()
     train_labels,target_labels = get_train_test_columns()
     train_data,test_data = seperate_test_and_train(raw_data,proportion=0.7)
+
     net = Network(sess=sess,n_input=len(train_labels),learning_rate=0.0001)
     test_x,test_y = sample_test_data(test_data=test_data,train_label=train_labels,target_label=target_labels)
     for epoch in range(100000):
