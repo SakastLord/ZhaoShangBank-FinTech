@@ -1,9 +1,10 @@
+from params import *
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 
 def csv2pandas():
-    raw_data_pd = pd.read_csv('/clever/data/FT_Camp_5/Train.csv')
+    raw_data_pd = pd.read_csv(DATA_PATH)
     return raw_data_pd
 
 
@@ -12,7 +13,7 @@ def check_distribution(data,title,xlabel,ylabel):
     # plt.hist(data)
     # plt.xlabel(xlabel=xlabel)
     # plt.ylabel(xlabel=ylabel)
-    # plt.title(title)
+    # plt.title(title)FR
     # plt.show
     # N = 20
     # max,min = data.max(),data.min()
@@ -53,7 +54,7 @@ def check_data(raw_data):
 
 
 def get_train_test_columns():
-    raw_data_pd = pd.read_csv('/clever/data/FT_Camp_5/Train.csv')
+    raw_data_pd = pd.read_csv(DATA_PATH)
     all_columns = raw_data_pd.colummns
     train_columns  = all_columns[1:-1]
     target_columns = all_columns[-1]
@@ -89,8 +90,8 @@ def seperate_raw_and_train(data,proportion):
     """
     data_all = data.sample(frac = 1)
     len_all = len(data)
-    bad_data  = data[raw_data['fake'] == 1]
-    good_data = data[raw_data['fake'] == 0]
+    bad_data  = data[data['fake'] == 1]
+    good_data = data[data['fake'] == 0]
     count_train = int(len_all*proportion)
     count_test = int(len_all - count_train)
     train_data = data_all[:count_train]

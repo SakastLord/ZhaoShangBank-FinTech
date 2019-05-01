@@ -24,10 +24,10 @@ def compute_acc_rec(predicted_list,truth_list):
             else:
                 # 正样本 预测为 负类
                 FN = FN + 1
-    acc     = ((TP + TN)*1.0)/ALL_COUNT
-    rec     = (TP*1.0)/sum(truth_list)
-    f_score = (acc*rec*2)/(acc+rec)
-    return acc,rec,f_score,TP
+    P = (TP*1.0)/(TP+FP)     # accuarcy
+    R = (TP*1.0)/(TP+FN) # recall
+    f_score = (P*R*2)/(P+R)
+    return P,R,f_score
 
 
 def run():
