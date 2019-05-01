@@ -81,7 +81,7 @@ def hybrid_data(raw_data,proportion):
 
 
 
-def seperate_raw_and_train(data,proportion):
+def seperate_test_and_train(data,proportion):
     """
 
     :param data:

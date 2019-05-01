@@ -2,6 +2,7 @@ import tensorflow as tf
 
 
 class Network(object):
+
     def __init__(self,sess,n_input,learning_rate):
         self.sess = sess
         self.dim_s = n_input
@@ -25,14 +26,12 @@ class Network(object):
         self.train_op = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(self.loss)
 
 
-
-
-    def train(self,data_x,data_y,pro):
-        dict = {self.input:data_x,self.output_truth:data_y,self.keep_probiliaty:pro}
+    def train(self,data_x,data_y,prob):
+        dict = {self.input:data_x,self.output_truth:data_y,self.keep_probiliaty:prob}
         self.sess.run(self.train_op,feed_dict = dict)
 
 
-    def inference(self,data_x,pro):
-        dict = {self.input:data_x,self.keep_probiliaty:pro}
+    def inference(self,data_x,prob):
+        dict = {self.input:data_x,self.keep_probiliaty:prob}
         result = self.sess.run(self.output,feed_dict = dict)
         return result
